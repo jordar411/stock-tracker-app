@@ -1,0 +1,118 @@
+.page-body {
+	background-image: url("/static/images/background-gray.jpg");
+	background-attachment: fixed;
+	position: relative;
+	min-height: 100vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.home-content {
+	background-image: url("/static/images/background-gray.jpg");
+	background-attachment: fixed;
+	background-size: contain;
+	position: relative;
+	top: 11em;
+}
+
+.home-body {
+	background-image: url("/static/images/homebackground.jpg");
+	position: absolute;
+	top: 5em;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	opacity: 0.6;
+	height: 31.5rem;
+}
+
+#home-heading {
+	margin-top: 7.5em;
+}
+
+.content-container {
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+	background-color: white;
+	overflow: auto;
+	height: -webkit-fill-available;
+}
+
+.company-container {
+	padding-top: 3rem;
+	background-color: white;
+	overflow: auto;
+}
+
+.negativeValue {
+	color: red;
+	font-weight: bold;
+}
+
+.send-mail {
+	display: inline;
+}
+
+#home-container {
+	position: relative;
+	z-index: 1;
+}
+
+.section-about {
+	padding-top: 2 rem;
+	padding-bottom: 2rem;
+	z-index: 1;
+}
+.alert {
+	z-index: 1;
+	margin-bottom: 0rem;
+}
+
+#logo {
+	height: 50px;
+}
+
+#logo-nav {
+	height: 3em;
+}
+
+.navbar-brand {
+	padding-top: 0;
+}
+
+.navbar {
+	z-index: 1;
+}
+
+.card {
+	width: 18rem;
+	max-height: 500px;
+	overflow: auto;
+}
+
+.container-fluid {
+	overflow: auto;
+}
+
+.table td,
+.table th {
+	vertical-align: middle;
+}
+
+.detailed-table-information {
+	width: 100px;
+}
+
+#error-page {
+	height: 100vh;
+}
+
+#error-image {
+	height: 40vh;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}

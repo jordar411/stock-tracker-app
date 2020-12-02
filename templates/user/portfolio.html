@@ -1,0 +1,32 @@
+{% extends 'base.html' %} {% block title %}{{current_user.username}} Portfolio{% endblock %}
+
+{% block content %}
+
+<h1>{{current_user.username}} Portfolio</h1>
+
+
+<!-- Button trigger add stock modal -->
+<button type="button" class="btn btn-primary my-3" data-toggle="modal" data-target="#add-to-portfolio">
+    Add New Stock to Portfolio
+</button>
+
+<!-- add stock modal -->
+{% include 'user/_add_stock_modal.html' %}
+<!-- add company details modal -->
+{% include 'stock/_company_details_modal.html' %}
+
+<!-- table -->
+{% if stock_details[0][0] %}
+
+{% include 'user/_portfolio_summary.html' %}
+
+<!-- edit & delete stock Modal -->
+{% include 'user/_edit_stock_modal.html' %}
+{% include 'user/_delete_stock_modal.html' %}
+
+<a href="{{url_for('send_portfolio')}}" class="btn btn-primary text-white send-mail mb-5">Send Portfolio Via
+    Email</a>
+{% else %}
+
+<h3>No stocks have been added to your portfolio</h3>
+{% endif %} {% endblock %}

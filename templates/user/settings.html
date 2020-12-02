@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}User Settings{% endblock %}
+
+{% block content %}
+
+<h1>User Settings</h1>
+
+<form method="POST">
+    <div class="modal-body">
+        {{ form.hidden_tag() }}
+
+        {% for field in form if field.widget.input_type !='hidden' %}
+
+        {% include 'auth/_form.html' %}
+
+        {% endfor %}
+        <div class="form-group-row justify-content-start">
+            <label class="col-md-3 col-form-label" for="password">password</label>
+            <a href="#" data-toggle="modal" data-target="#edit-password">
+                <input class="col-md-7" id="state" name="password" type="password" value="yourpassword">
+            </a>
+        </div>
+
+        <a class='btn btn-outline-danger mt-2' href="{{ url_for('portfolio') }}">Go Back</a>
+        <button class="btn btn-success mt-2" type="submit">Update User Settings</button>
+    </div>
+</form>
+
+{% include 'user/_edit_password_modal.html' %}
+
+{% endblock %}
