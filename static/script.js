@@ -1,7 +1,7 @@
 let loc = location.href;
 let ALL_STOCKS = [];
 
-let BASE_URL = "https://cw-stock-tracker.herokuapp.com";
+let BASE_URL = "https://stock-tracker-app-seven.vercel.app/";
 let BASE_URL_API = `${BASE_URL}/api`;
 if (loc.includes("localhost")) {
 	BASE_URL = "http://localhost:5000";
